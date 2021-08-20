@@ -1,0 +1,195 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: calisia-waitlist\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-20 11:52+0000\n"
+"PO-Revision-Date: 2021-08-20 12:03+0000\n"
+"Last-Translator: \n"
+"Language-Team: Polski\n"
+"Language: pl_PL\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10 >= 2 && n%10<=4 "
+"&&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.3; wp-5.8\n"
+"X-Domain: calisia-waitlist"
+
+#: src/waitlist/wptables/WaitlistTable.php:241
+msgid "Added"
+msgstr "Dodano"
+
+#: src/waitlist/wptables/TopProductsTableControls.php:43
+#: src/waitlist/wptables/WaitlistTableControls.php:43
+msgid "All (Customers and Visitors)"
+msgstr "Wszyscy (Klienci i Goście)"
+
+#: src/waitlist/wptables/TopProductsTableControls.php:31
+#: src/waitlist/wptables/WaitlistTableControls.php:31
+msgid "All (Sent and Not Sent)"
+msgstr "Wszystkie (Wysłane i Nie wysłane)"
+
+#: src/email/Mailer.php:24
+msgid "All the best from Spiżarnia Rumianek team"
+msgstr "Wszystkiego dobrego od zespołu Spiżarni Rumianek"
+
+#. Name of the plugin
+msgid "calisia-waitlist"
+msgstr "calisia-waitlist"
+
+#: src/waitlist/wptables/TopProductsTable.php:233
+msgid "Count"
+msgstr "Ilość"
+
+#: templates/elements/ProductWaitlistInfo.php:4
+#, php-format
+msgid "Currently waiting for that product: %d."
+msgstr "Aktualnie czekających na ten produkt: %d."
+
+#: src/waitlist/wptables/WaitlistTable.php:240
+#: src/waitlist/wptables/TopProductsTableControls.php:44
+#: src/waitlist/wptables/WaitlistTableControls.php:44
+msgid "Customer"
+msgstr "Klient"
+
+#: src/waitlist/wptables/WaitlistTable.php:239
+msgid "E-mail"
+msgstr "E-mail"
+
+#: src/waitlist/Subscription.php:113
+msgid "Error while deleting data"
+msgstr "Błąd przy usuwaniu danych"
+
+#: src/waitlist/Subscription.php:104
+msgid "Error while saving data"
+msgstr "Błąd przy zapisie danych"
+
+#: src/waitlist/elements/UnsubscribePage.php:45
+msgid "ERROR. Not enough data."
+msgstr "BŁĄD. Nie wystarczająca ilość danych."
+
+#: src/waitlist/elements/UnsubscribePage.php:57
+msgid "ERROR. Wrong data."
+msgstr "BŁĄD. Niepoprawne dane."
+
+#: src/waitlist/wptables/TopProductsTableControls.php:52
+#: src/waitlist/wptables/WaitlistTableControls.php:52
+msgid "Filter"
+msgstr "Filtruj"
+
+#: src/waitlist/elements/WaitlistInfo.php:21
+#, php-format
+msgid "for product: %s"
+msgstr "dla produktu: %s"
+
+#: src/waitlist/elements/WaitlistInfo.php:22
+#, php-format
+msgid "for user: %s"
+msgstr "dla użytkownika: %s"
+
+#: src/waitlist/Subscription.php:130
+msgid "Hello,"
+msgstr "Witaj,"
+
+#: src/waitlist/Scripts.php:35 src/waitlist/elements/SubscribeForm.php:21
+msgid "Join Waitlist"
+msgstr "Dołącz do Listy Oczekujących"
+
+#: src/waitlist/Scripts.php:36 src/waitlist/elements/SubscribeForm.php:21
+msgid "Leave Waitlist"
+msgstr "Opuść Listę Oczekujących"
+
+#: src/email/WpMail.php:66
+msgid "Message not provided"
+msgstr "Nie podano wiadomośći"
+
+#: src/waitlist/wptables/WaitlistTable.php:161
+#: src/waitlist/wptables/TopProductsTable.php:164
+msgid "No elements avaliable."
+msgstr "Brak wyników"
+
+#: src/waitlist/wptables/TopProductsTableControls.php:32
+#: src/waitlist/wptables/WaitlistTableControls.php:32
+msgid "Not Sent"
+msgstr "Nie wysłane"
+
+#: src/waitlist/Cron.php:110
+msgid "Product from your waitlist is available for purchase"
+msgstr "Produkt na który czekasz jest dostępny do zakupu"
+
+#: src/waitlist/wptables/WaitlistTable.php:238
+#: src/waitlist/wptables/TopProductsTable.php:232
+msgid "Product Name"
+msgstr "Nazwa Produktu"
+
+#: src/email/WpMail.php:60
+msgid "Reciver address not provided"
+msgstr "Nie podano adresu odbiorcy"
+
+#: src/waitlist/wptables/WaitlistTable.php:242
+#: src/waitlist/wptables/TopProductsTableControls.php:33
+#: src/waitlist/wptables/WaitlistTableControls.php:33
+msgid "Sent"
+msgstr "Wysłane"
+
+#: templates/elements/ProductWaitlistInfo.php:5
+msgid "Show waitlist"
+msgstr "Pokaż listę oczekujących"
+
+#: src/email/WpMail.php:63
+msgid "Subject not provided"
+msgstr "Nie podano tytułu"
+
+#: src/waitlist/Scripts.php:38
+msgid ""
+"Thanks for signing up on the waitlist. We will inform you once the product "
+"is available for purchase."
+msgstr ""
+"Dziękujemy za zapisanie się na listę oczekujących. Powiadomimy Cię jak tylko "
+"produkt będzie dostępny."
+
+#. Author of the plugin
+msgid "Tomasz Boroń"
+msgstr "Tomasz Boroń"
+
+#: src/waitlist/Subscription.php:133
+msgid "Use this link to unsubscribe"
+msgstr "Użyj tego linka, aby opuścić listę oczekujących"
+
+#: src/waitlist/wptables/TopProductsTableControls.php:45
+#: src/waitlist/wptables/WaitlistTableControls.php:45
+msgid "Visitor"
+msgstr "Gość"
+
+#: templates/elements/ProductWaitlistInfo.php:2 src/waitlist/Menu.php:27
+#: src/waitlist/Menu.php:28
+msgid "Waitlist"
+msgstr "Lista Oczekujących"
+
+#: src/waitlist/wptables/WaitlistTable.php:33
+#: src/waitlist/wptables/TopProductsTable.php:31
+msgid "waitlist"
+msgstr "lista oczekujących"
+
+#: src/waitlist/wptables/WaitlistTable.php:34
+#: src/waitlist/wptables/TopProductsTable.php:32
+msgid "waitlists"
+msgstr "listy oczekujących"
+
+#: src/waitlist/Subscription.php:132
+msgid "We will inform you when it is available."
+msgstr "Powiadomimy Cię gdy będzie dostępny."
+
+#: src/waitlist/Subscriber.php:21
+msgid "You are all ready subscribed to that waitlist"
+msgstr "Jesteś już zapisany na tę listę"
+
+#: src/waitlist/Subscription.php:131
+#, php-format
+msgid "You have joined product (%s) waitlist."
+msgstr "Dołączyłeś/aś do listy oczekujących na produkt (%s)."
+
+#: src/waitlist/elements/UnsubscribePage.php:66
+msgid "You successfully unsubscribed from the waitlist."
+msgstr "Usunięto subskrypcję z listy oczekujących."
