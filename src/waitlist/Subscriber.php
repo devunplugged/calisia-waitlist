@@ -17,6 +17,10 @@ class Subscriber extends Subscription{
     }
 
     public function visitorSubscribe(){
+        if(!$this->email){
+            throw new CalisiaException('No email provided for visitor customer subscription', __('E-mail address is required','calisia-waitlist'));  
+        }
+
         if($this->isSubscribed()){
             throw new CalisiaException('Visitor tried to double subscribe', __('You are all ready subscribed to that waitlist','calisia-waitlist'));  
         }

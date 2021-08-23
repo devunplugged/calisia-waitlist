@@ -144,8 +144,6 @@ class TopProductsTable extends WpListTable {
 		
 
 		if(empty($where_clause['params'])){
-
-			echo "record count:<br> " . $sql;
 			return $wpdb->get_var( $sql );
 		}else{
 			$result = $wpdb->get_results( 

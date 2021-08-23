@@ -1,14 +1,15 @@
 console.log("JS loaded!");
 
 jQuery( document ).ready(function() {
-    jQuery(document).on('click', '.waitlist-button', function(event) {
+    jQuery(document).on('submit', '#waitlist-form', function(event) {
         event.preventDefault();
+        //document.getElementById('waitlist-form').checkValidity();
 
         //console.log('subscribe button clicked');
         jQuery('.waitlist-button').prop('disabled', true);
         let dataToPost = {
             action: "calisia_waitlist_subscribe", 
-            productId: jQuery(this).data( "product-id" )
+            productId: jQuery('.waitlist-button').data( "product-id" )
         }
         if(jQuery('#user-email').length){
             dataToPost['email'] = jQuery('#user-email').val();

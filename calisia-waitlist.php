@@ -12,6 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 define('CALISIA_WAITLIST_ROOT', __DIR__);
 define('CALISIA_WAITLIST_URL', plugin_dir_url( __FILE__ ));
+define('CALISIA_WAITLIST_FILE', __FILE__ );
 define('CALISIA_WAITLIST_UNSUBSCRIBE_PAGE_NAME', 'Usuń Subskrypcje z Listy Oczekujących');
 
 require CALISIA_WAITLIST_ROOT . '/vendor/autoload.php';
@@ -87,6 +88,16 @@ class CalisiaWaitlist{
         global $product;
         $productHandler = ProductHandlerFactory::create($product);
         $productHandler->renderSubscribeForm($this->renderer);
+
+        //debug cron
+        /*
+        if(isset($_GET['cron-schedule'])){
+            $cron_jobs = get_option( 'cron' );
+            foreach($cron_jobs as $key=>$value){
+                echo wp_date('Y-m-d H:i', $key) . '<br>';
+                echo "<pre>";var_dump($value);echo "</pre>";
+            }
+        }*/
     }
 
 

@@ -26,7 +26,7 @@ class Menu{
         $menuPage = new MenuPage($this->renderer);
         $menuPage->pageTitle = __( 'Waitlist', 'calisia-waitlist' );
         $menuPage->menuTitle = __( 'Waitlist', 'calisia-waitlist' );
-        $menuPage->capability = 'manage_options';
+        $menuPage->capability = 'edit_posts';
         $menuPage->menuSlug = 'waitlist';
         $menuPage->pageTemplate = 'settings/Waitlist';
         $menuPage->templateVars = [
@@ -43,9 +43,9 @@ class Menu{
 
         $menuPage = new SubMenuPage($this->renderer);
         $menuPage->parentSlug = 'waitlist';
-        $menuPage->pageTitle = 'Top Waitlist Products';
-        $menuPage->menuTitle = __( 'Top Products', 'some-textdomain' );
-        $menuPage->capability = 'manage_options';
+        $menuPage->pageTitle = __( 'Top Products', 'calisia-waitlist' );
+        $menuPage->menuTitle = __( 'Top Products', 'calisia-waitlist' );
+        $menuPage->capability = 'edit_posts';
         $menuPage->menuSlug = 'waitlist-top-products';
         $menuPage->pageTemplate = 'settings/WaitlistTopProducts';
         $menuPage->templateVars = [

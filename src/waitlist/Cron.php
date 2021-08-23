@@ -24,9 +24,9 @@ class Cron{
 
     private function registerHooks(){
         //set activation actions
-        register_activation_hook( __FILE__, [$this,'activateHooks'] );
+        register_activation_hook( CALISIA_WAITLIST_FILE, [$this,'activateHooks'] );
         //set deactivation actions
-        register_deactivation_hook( __FILE__, [$this,'deactivateHooks'] );
+        register_deactivation_hook( CALISIA_WAITLIST_FILE, [$this,'deactivateHooks'] );
     }
 
     private function registerActions(){
@@ -59,7 +59,7 @@ class Cron{
     }
     
     public function executeTask(){
-        
+        Debugger::debug("cron task start: " . date("Y-m-d H:i"));
         $schedules = $this->schedule->getActiveSchedules();
         $waitlist = new Waitlist();
         $waitlist->setEntriesForSchedules($schedules);
@@ -75,7 +75,7 @@ class Cron{
             if(count($waitlistEntries) == 0){
                 $schedule->set_done(wp_date('Y-m-d H:i'));
                 $schedule->update();
-                break;
+                continue;
             }
             
             //$product = new \WC_Product($schedule->get_product_id());
@@ -85,7 +85,7 @@ class Cron{
             if( !$product->is_in_stock() ) {
                 $schedule->set_done(wp_date('Y-m-d H:i'));
                 $schedule->update();
-                break;
+                continue;
             }
             //$quantity = $product->get_data()['stock_quantity'];
             
@@ -108,9 +108,9 @@ class Cron{
         $mailer = MailerFactory::create();
         $mailer->service->set_to($entry->get_email());
         $mailer->service->set_subject(__('Product from your waitlist is available for purchase','calisia-waitlist'));
-        $message =  sprintf( __('Hello %s,'),$entry->get_email()) . '<br>';
-        $message .= sprintf( __('Product %s is available for purchase.'), get_the_title($entry->get_product_id())) . '<br>';
-        $message .= sprintf( __('Here is your link to the product: %s '), get_permalink($entry->get_product_id())) . '<br>';
+        $message =  sprintf( __('Hello %s,', 'calisia-waitlist'),$entry->get_email()) . '<br>';
+        $message .= sprintf( __('Product %s is available for purchase.', 'calisia-waitlist'), get_the_title($entry->get_product_id())) . '<br>';
+        $message .= sprintf( __('Here is your link to the product: %s ', 'calisia-waitlist'), get_permalink($entry->get_product_id())) . '<br>';
         $mailer->service->set_message($message);
         try{
             $mailer->sendEmail();
